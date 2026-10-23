@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>アクア農園</title>
+<meta name="apple-mobile-web-app-title" content="アクア農園">
+<meta name="theme-color" content="#2E6B4E">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAD2ElEQVR4nO3dTY4bNxSFUXaQ9XgdnsTrCNBrSAb2Ggx4H5lkeRkoEBp2X3VJKlaRj+dMDbiJel+x9MO2Xz69fmnwnt/OXgDjEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIfj97Aef7+/Vz+qOv3/89ciWjeVn2H4y70cSv1qxkuTjuauJXS1WyUBxPZvHWIoms8oJ0xzJ2/9uGtUQcPWa5Qh/FHysHjLDwI6byznHMzV14Cykbx5Ezq9pHzTiOn1bJPmrGwS4KxnHWTVxv86gWx7kTKtZHqThGmM0Ia9hLqTjYV504xrllx1nJk5zn+N9PH3SWGfAziuwco81ytPU8pkgc9FAhjjFv0zFXdZcKcdCJOIimj2Pk3XvktW0xfRz0Iw6iueMYf98ef4U3zB0HXYmDSBxE4nhE4V9HeGviOM56rXcpY3sf874mnTiOU7xtovz+IY47rHbmQxxbrVZGE8dGC5bRxLHFmmU0cXxo2TKaOG5buYwmjhsWL6OJI1FGE8cWa5bR1onj4U8zly2jLRLHvd+GXK1cRps6jo3DfvjbkL3KmPcrmInj2OinGW8c1eJ7xkX9ONqjfbBEHE0fD1kljqaP+80dx70DPr6PqROcO44H2D+2Wy6Opo/Npo/jsdEe08fs2U0fx8N8kvGhdeNo+vhIhTie2b379TH7M6XViONJ9o+kSBxP3qa791Fg22hl4qCHOnGMc7OOs5In1YmD3ZWKY4RbdoQ17KVUHO3s2VQqo9WLo503oWJltJJxsJeacRx/E9fbNlrVONqx0ypZRiscRztqZlXLaOX/G6/L5Dp9e1I4i4vKO8dVjymWL6MtEkfbe5YrlNHKP1be2uURs0gWFwvFcXGd7l2VLNXE1XJxXG2pZM0mrl4+vX45ew0MapUXpDxAHETiIBIHkTiIxEEkDiJxEB30Cek/334c84PW8cdff/b+EUfsHMro4YCr2j0OZfTT+9r2jUMZvXW9wh3jUMYx+l1n71aIxEEkDiJxEHWM44BPaWg9r3PfnUMfvXW9wt0fK/rop/e1PeI1hz56OOCqOn1O5N0KkTiIxEEkDiJxEImDSBxE4iBy+nxWTp8TOX3OLU6fc4vT59zi9DknEAeROIjEQeT0+fScPud9Tp/zPqfPeZ/T55zJuxUicRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRD9BxDXBfQK3ysCAAAAAElFTkSuQmCC">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAD2ElEQVR4nO3dTY4bNxSFUXaQ9XgdnsTrCNBrSAb2Ggx4H5lkeRkoEBp2X3VJKlaRj+dMDbiJel+x9MO2Xz69fmnwnt/OXgDjEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIfj97Aef7+/Vz+qOv3/89ciWjeVn2H4y70cSv1qxkuTjuauJXS1WyUBxPZvHWIoms8oJ0xzJ2/9uGtUQcPWa5Qh/FHysHjLDwI6byznHMzV14Cykbx5Ezq9pHzTiOn1bJPmrGwS4KxnHWTVxv86gWx7kTKtZHqThGmM0Ia9hLqTjYV504xrllx1nJk5zn+N9PH3SWGfAziuwco81ytPU8pkgc9FAhjjFv0zFXdZcKcdCJOIimj2Pk3XvktW0xfRz0Iw6iueMYf98ef4U3zB0HXYmDSBxE4nhE4V9HeGviOM56rXcpY3sf874mnTiOU7xtovz+IY47rHbmQxxbrVZGE8dGC5bRxLHFmmU0cXxo2TKaOG5buYwmjhsWL6OJI1FGE8cWa5bR1onj4U8zly2jLRLHvd+GXK1cRps6jo3DfvjbkL3KmPcrmInj2OinGW8c1eJ7xkX9ONqjfbBEHE0fD1kljqaP+80dx70DPr6PqROcO44H2D+2Wy6Opo/Npo/jsdEe08fs2U0fx8N8kvGhdeNo+vhIhTie2b379TH7M6XViONJ9o+kSBxP3qa791Fg22hl4qCHOnGMc7OOs5In1YmD3ZWKY4RbdoQ17KVUHO3s2VQqo9WLo503oWJltJJxsJeacRx/E9fbNlrVONqx0ypZRiscRztqZlXLaOX/G6/L5Dp9e1I4i4vKO8dVjymWL6MtEkfbe5YrlNHKP1be2uURs0gWFwvFcXGd7l2VLNXE1XJxXG2pZM0mrl4+vX45ew0MapUXpDxAHETiIBIHkTiIxEEkDiJxEB30Cek/334c84PW8cdff/b+EUfsHMro4YCr2j0OZfTT+9r2jUMZvXW9wh3jUMYx+l1n71aIxEEkDiJxEHWM44BPaWg9r3PfnUMfvXW9wt0fK/rop/e1PeI1hz56OOCqOn1O5N0KkTiIxEEkDiJxEImDSBxE4iBy+nxWTp8TOX3OLU6fc4vT59zi9DknEAeROIjEQeT0+fScPud9Tp/zPqfPeZ/T55zJuxUicRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRD9BxDXBfQK3ysCAAAAAElFTkSuQmCC">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
+  /* 縦に大きなボタンを並べるだけの入り口ページ */
+  :root {
+    --bg: #EEF3EF; --surface: #FFFFFF; --border: #CFDCD3; --text: #1F2A24; --sub: #5B6A61;
+    --green: #2E6B4E; --blue: #2B5683; --gold: #8A6A1F;
+    --green-l: #E1EEE6; --blue-l: #E2EBF5; --gold-l: #F6EBD7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141A16; --surface: #1D2520; --border: #34413A; --text: #E6EEE9; --sub: #9EB0A5;
+      --green: #7CC39C; --blue: #8DB4E0; --gold: #E0BE6E;
+      --green-l: #22362B; --blue-l: #1F2B3A; --gold-l: #352C18;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: 'Zen Kaku Gothic New', -apple-system, 'Hiragino Sans', 'Yu Gothic', sans-serif;
+    line-height: 1.6;
+    padding: max(28px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  }
+  .wrap { max-width: 520px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+  header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  header img { width: 44px; height: 44px; border-radius: 10px; }
+  h1 { font-size: 22px; margin: 0; letter-spacing: .04em; }
+  .today { font-size: 13px; color: var(--sub); margin: 0; }
+  a.app {
+    display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    padding: 18px 16px; min-height: 84px; transition: transform .08s, border-color .15s;
+  }
+  a.app:hover { border-color: var(--c); }
+  a.app:active { transform: scale(.985); }
+  a.app:focus-visible { outline: 3px solid var(--c); outline-offset: 2px; }
+  .mark { flex-shrink: 0; width: 48px; height: 48px; border-radius: 12px; background: var(--cl); color: var(--c); display: grid; place-items: center; font-size: 20px; font-weight: 700; }
+  .txt { flex: 1; min-width: 0; }
+  .name { font-size: 18px; font-weight: 700; }
+  .desc { font-size: 13px; color: var(--sub); }
+  .arrow { color: var(--sub); font-size: 22px; }
+  .sales { --c: var(--green); --cl: var(--green-l); }
+  .mujin { --c: var(--blue); --cl: var(--blue-l); }
+  .shushi { --c: var(--gold); --cl: var(--gold-l); }
+  .note { font-size: 12px; color: var(--sub); margin-top: 6px; }
+  @media (prefers-reduced-motion: reduce) { a.app { transition: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAD2ElEQVR4nO3dTY4bNxSFUXaQ9XgdnsTrCNBrSAb2Ggx4H5lkeRkoEBp2X3VJKlaRj+dMDbiJel+x9MO2Xz69fmnwnt/OXgDjEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIfj97Aef7+/Vz+qOv3/89ciWjeVn2H4y70cSv1qxkuTjuauJXS1WyUBxPZvHWIoms8oJ0xzJ2/9uGtUQcPWa5Qh/FHysHjLDwI6byznHMzV14Cykbx5Ezq9pHzTiOn1bJPmrGwS4KxnHWTVxv86gWx7kTKtZHqThGmM0Ia9hLqTjYV504xrllx1nJk5zn+N9PH3SWGfAziuwco81ytPU8pkgc9FAhjjFv0zFXdZcKcdCJOIimj2Pk3XvktW0xfRz0Iw6iueMYf98ef4U3zB0HXYmDSBxE4nhE4V9HeGviOM56rXcpY3sf874mnTiOU7xtovz+IY47rHbmQxxbrVZGE8dGC5bRxLHFmmU0cXxo2TKaOG5buYwmjhsWL6OJI1FGE8cWa5bR1onj4U8zly2jLRLHvd+GXK1cRps6jo3DfvjbkL3KmPcrmInj2OinGW8c1eJ7xkX9ONqjfbBEHE0fD1kljqaP+80dx70DPr6PqROcO44H2D+2Wy6Opo/Npo/jsdEe08fs2U0fx8N8kvGhdeNo+vhIhTie2b379TH7M6XViONJ9o+kSBxP3qa791Fg22hl4qCHOnGMc7OOs5In1YmD3ZWKY4RbdoQ17KVUHO3s2VQqo9WLo503oWJltJJxsJeacRx/E9fbNlrVONqx0ypZRiscRztqZlXLaOX/G6/L5Dp9e1I4i4vKO8dVjymWL6MtEkfbe5YrlNHKP1be2uURs0gWFwvFcXGd7l2VLNXE1XJxXG2pZM0mrl4+vX45ew0MapUXpDxAHETiIBIHkTiIxEEkDiJxEB30Cek/334c84PW8cdff/b+EUfsHMro4YCr2j0OZfTT+9r2jUMZvXW9wh3jUMYx+l1n71aIxEEkDiJxEHWM44BPaWg9r3PfnUMfvXW9wt0fK/rop/e1PeI1hz56OOCqOn1O5N0KkTiIxEEkDiJxEImDSBxE4iBy+nxWTp8TOX3OLU6fc4vT59zi9DknEAeROIjEQeT0+fScPud9Tp/zPqfPeZ/T55zJuxUicRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRD9BxDXBfQK3ysCAAAAAElFTkSuQmCC" alt="">
+    <div><h1>アクア農園</h1><p class="today" id="today"></p></div>
+  </header>
+
+  <a class="app sales" href="https://yakyuuhatomodachi-droid.github.io/nouka-app/">
+    <span class="mark">販</span>
+    <span class="txt"><span class="name">販売管理</span><br><span class="desc">出荷・注文・取引先・請求書</span></span>
+    <span class="arrow">›</span>
+  </a>
+  <a class="app mujin" href="https://yakyuuhatomodachi-droid.github.io/mujin/">
+    <span class="mark">無</span>
+    <span class="txt"><span class="name">無人販売</span><br><span class="desc">無人販売所・幸福駅・移動販売の売上</span></span>
+    <span class="arrow">›</span>
+  </a>
+  <a class="app shushi" href="https://yakyuuhatomodachi-droid.github.io/shushi/">
+    <span class="mark">¥</span>
+    <span class="txt"><span class="name">収支管理</span><br><span class="desc">お金の出入り・確定申告用の集計</span></span>
+    <span class="arrow">›</span>
+  </a>
+
+  <p class="note">それぞれのアプリは、はじめて開いたときだけ合言葉を入れてください。アプリからこのページに戻るときは、ブラウザの「戻る」を使います。</p>
+</div>
+<script>
+  (function () {
+    var d = new Date(), w = ['日', '月', '火', '水', '木', '金', '土'];
+    document.getElementById('today').textContent = d.getFullYear() + '年' + (d.getMonth() + 1) + '月' + d.getDate() + '日(' + w[d.getDay()] + ')';
+  })();
+</script>
+</body>
+</html>
