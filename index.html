@@ -13,14 +13,14 @@
   /* 縦に大きなボタンを並べるだけの入り口ページ */
   :root {
     --bg: #EEF3EF; --surface: #FFFFFF; --border: #CFDCD3; --text: #1F2A24; --sub: #5B6A61;
-    --green: #2E6B4E; --blue: #2B5683; --gold: #8A6A1F;
-    --green-l: #E1EEE6; --blue-l: #E2EBF5; --gold-l: #F6EBD7;
+    --green: #2E6B4E; --blue: #2B5683; --gold: #8A6A1F; --red: #A8452F;
+    --green-l: #E1EEE6; --blue-l: #E2EBF5; --gold-l: #F6EBD7; --red-l: #F6E2DC;
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #141A16; --surface: #1D2520; --border: #34413A; --text: #E6EEE9; --sub: #9EB0A5;
-      --green: #7CC39C; --blue: #8DB4E0; --gold: #E0BE6E;
-      --green-l: #22362B; --blue-l: #1F2B3A; --gold-l: #352C18;
+      --green: #7CC39C; --blue: #8DB4E0; --gold: #E0BE6E; --red: #E79A86;
+      --green-l: #22362B; --blue-l: #1F2B3A; --gold-l: #352C18; --red-l: #3A231D;
       color-scheme: dark;
     }
   }
@@ -52,6 +52,7 @@
   .sales { --c: var(--green); --cl: var(--green-l); }
   .mujin { --c: var(--blue); --cl: var(--blue-l); }
   .shushi { --c: var(--gold); --cl: var(--gold-l); }
+  .regi { --c: var(--red); --cl: var(--red-l); }
   .note { font-size: 12px; color: var(--sub); margin-top: 6px; }
   @media (prefers-reduced-motion: reduce) { a.app { transition: none; } }
 </style>
@@ -76,6 +77,11 @@
   <a class="app shushi" href="https://yakyuuhatomodachi-droid.github.io/shushi/">
     <span class="mark">¥</span>
     <span class="txt"><span class="name">収支管理</span><br><span class="desc">お金の出入り・確定申告用の集計</span></span>
+    <span class="arrow">›</span>
+  </a>
+  <a class="app regi" href="https://yakyuuhatomodachi-droid.github.io/regi/">
+    <span class="mark">レ</span>
+    <span class="txt"><span class="name">レジ</span><br><span class="desc">マルシェ・直売の会計と売上</span></span>
     <span class="arrow">›</span>
   </a>
 
