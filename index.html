@@ -13,14 +13,14 @@
   /* 縦に大きなボタンを並べるだけの入り口ページ */
   :root {
     --bg: #EEF3EF; --surface: #FFFFFF; --border: #CFDCD3; --text: #1F2A24; --sub: #5B6A61;
-    --green: #2E6B4E; --blue: #2B5683; --gold: #8A6A1F; --red: #A8452F;
-    --green-l: #E1EEE6; --blue-l: #E2EBF5; --gold-l: #F6EBD7; --red-l: #F6E2DC;
+    --green: #2E6B4E; --blue: #2B5683; --gold: #8A6A1F; --red: #A8452F; --teal: #1F6B73; --purple: #5B4A8B;
+    --green-l: #E1EEE6; --blue-l: #E2EBF5; --gold-l: #F6EBD7; --red-l: #F6E2DC; --teal-l: #DDEEF0; --purple-l: #ECE7F6;
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #141A16; --surface: #1D2520; --border: #34413A; --text: #E6EEE9; --sub: #9EB0A5;
-      --green: #7CC39C; --blue: #8DB4E0; --gold: #E0BE6E; --red: #E79A86;
-      --green-l: #22362B; --blue-l: #1F2B3A; --gold-l: #352C18; --red-l: #3A231D;
+      --green: #7CC39C; --blue: #8DB4E0; --gold: #E0BE6E; --red: #E79A86; --teal: #7CC8CF; --purple: #B9A8E8;
+      --green-l: #22362B; --blue-l: #1F2B3A; --gold-l: #352C18; --red-l: #3A231D; --teal-l: #1B3336; --purple-l: #2A2440;
       color-scheme: dark;
     }
   }
@@ -53,6 +53,8 @@
   .mujin { --c: var(--blue); --cl: var(--blue-l); }
   .shushi { --c: var(--gold); --cl: var(--gold-l); }
   .regi { --c: var(--red); --cl: var(--red-l); }
+  .shorui { --c: var(--teal); --cl: var(--teal-l); }
+  .kintai { --c: var(--purple); --cl: var(--purple-l); }
   .note { font-size: 12px; color: var(--sub); margin-top: 6px; }
   @media (prefers-reduced-motion: reduce) { a.app { transition: none; } }
 </style>
@@ -69,6 +71,11 @@
     <span class="txt"><span class="name">販売管理</span><br><span class="desc">出荷・注文・取引先・請求書</span></span>
     <span class="arrow">›</span>
   </a>
+  <a class="app shorui" href="https://yakyuuhatomodachi-droid.github.io/shorui/">
+    <span class="mark">書</span>
+    <span class="txt"><span class="name">書類作成</span><br><span class="desc">見積書・納品書・請求書をPDFで</span></span>
+    <span class="arrow">›</span>
+  </a>
   <a class="app mujin" href="https://yakyuuhatomodachi-droid.github.io/mujin/">
     <span class="mark">無</span>
     <span class="txt"><span class="name">無人販売</span><br><span class="desc">無人販売所・幸福駅・移動販売の売上</span></span>
@@ -79,13 +86,18 @@
     <span class="txt"><span class="name">収支管理</span><br><span class="desc">お金の出入り・確定申告用の集計</span></span>
     <span class="arrow">›</span>
   </a>
+  <a class="app kintai" href="https://yakyuuhatomodachi-droid.github.io/kintai/">
+    <span class="mark">勤</span>
+    <span class="txt"><span class="name">勤怠管理</span><br><span class="desc">タイムカード・給与計算・給与明細</span></span>
+    <span class="arrow">›</span>
+  </a>
   <a class="app regi" href="https://yakyuuhatomodachi-droid.github.io/regi/">
     <span class="mark">レ</span>
     <span class="txt"><span class="name">レジ</span><br><span class="desc">マルシェ・直売の会計と売上</span></span>
     <span class="arrow">›</span>
   </a>
 
-  <p class="note">それぞれのアプリは、はじめて開いたときだけ合言葉を入れてください。アプリからこのページに戻るときは、ブラウザの「戻る」を使います。</p>
+  <p class="note">それぞれのアプリは、はじめて開いたときだけ合言葉を入れてください。アプリからこのページに戻るときは、アプリの上にある「⌂ トップへ」を押します。</p>
 </div>
 <script>
   (function () {
