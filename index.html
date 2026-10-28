@@ -33,9 +33,22 @@
   }
   .wrap { max-width: 520px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
   header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
-  header img { width: 44px; height: 44px; border-radius: 10px; }
+  .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+  header img { width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0; }
   h1 { font-size: 22px; margin: 0; letter-spacing: .04em; }
   .today { font-size: 13px; color: var(--sub); margin: 0; }
+  /* ホームページ・WordPress へのボタン(アクア農園の左側) */
+  .hp-links { display: flex; flex-direction: column; gap: 6px; margin-left: auto; flex-shrink: 0; }
+  a.hp {
+    display: inline-flex; align-items: center; justify-content: center; gap: 4px;
+    font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap;
+    padding: 6px 12px; min-height: 34px; border-radius: 999px;
+    background: var(--green); color: #fff; border: 1px solid var(--green);
+  }
+  a.hp.edit { background: var(--surface); color: var(--green); }
+  @media (prefers-color-scheme: dark) { a.hp { color: #141A16; } a.hp.edit { color: var(--green); } }
+  a.hp:active { transform: scale(.97); }
+  a.hp:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
   a.app {
     display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text);
     background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
@@ -56,14 +69,20 @@
   .shorui { --c: var(--teal); --cl: var(--teal-l); }
   .kintai { --c: var(--purple); --cl: var(--purple-l); }
   .note { font-size: 12px; color: var(--sub); margin-top: 6px; }
-  @media (prefers-reduced-motion: reduce) { a.app { transition: none; } }
+  @media (prefers-reduced-motion: reduce) { a.app, a.hp { transition: none; } }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAD2ElEQVR4nO3dTY4bNxSFUXaQ9XgdnsTrCNBrSAb2Ggx4H5lkeRkoEBp2X3VJKlaRj+dMDbiJel+x9MO2Xz69fmnwnt/OXgDjEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIfj97Aef7+/Vz+qOv3/89ciWjeVn2H4y70cSv1qxkuTjuauJXS1WyUBxPZvHWIoms8oJ0xzJ2/9uGtUQcPWa5Qh/FHysHjLDwI6byznHMzV14Cykbx5Ezq9pHzTiOn1bJPmrGwS4KxnHWTVxv86gWx7kTKtZHqThGmM0Ia9hLqTjYV504xrllx1nJk5zn+N9PH3SWGfAziuwco81ytPU8pkgc9FAhjjFv0zFXdZcKcdCJOIimj2Pk3XvktW0xfRz0Iw6iueMYf98ef4U3zB0HXYmDSBxE4nhE4V9HeGviOM56rXcpY3sf874mnTiOU7xtovz+IY47rHbmQxxbrVZGE8dGC5bRxLHFmmU0cXxo2TKaOG5buYwmjhsWL6OJI1FGE8cWa5bR1onj4U8zly2jLRLHvd+GXK1cRps6jo3DfvjbkL3KmPcrmInj2OinGW8c1eJ7xkX9ONqjfbBEHE0fD1kljqaP+80dx70DPr6PqROcO44H2D+2Wy6Opo/Npo/jsdEe08fs2U0fx8N8kvGhdeNo+vhIhTie2b379TH7M6XViONJ9o+kSBxP3qa791Fg22hl4qCHOnGMc7OOs5In1YmD3ZWKY4RbdoQ17KVUHO3s2VQqo9WLo503oWJltJJxsJeacRx/E9fbNlrVONqx0ypZRiscRztqZlXLaOX/G6/L5Dp9e1I4i4vKO8dVjymWL6MtEkfbe5YrlNHKP1be2uURs0gWFwvFcXGd7l2VLNXE1XJxXG2pZM0mrl4+vX45ew0MapUXpDxAHETiIBIHkTiIxEEkDiJxEB30Cek/334c84PW8cdff/b+EUfsHMro4YCr2j0OZfTT+9r2jUMZvXW9wh3jUMYx+l1n71aIxEEkDiJxEHWM44BPaWg9r3PfnUMfvXW9wt0fK/rop/e1PeI1hz56OOCqOn1O5N0KkTiIxEEkDiJxEImDSBxE4iBy+nxWTp8TOX3OLU6fc4vT59zi9DknEAeROIjEQeT0+fScPud9Tp/zPqfPeZ/T55zJuxUicRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRD9BxDXBfQK3ysCAAAAAElFTkSuQmCC" alt="">
-    <div><h1>アクア農園</h1><p class="today" id="today"></p></div>
+    <div class="brand">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAD2ElEQVR4nO3dTY4bNxSFUXaQ9XgdnsTrCNBrSAb2Ggx4H5lkeRkoEBp2X3VJKlaRj+dMDbiJel+x9MO2Xz69fmnwnt/OXgDjEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIfj97Aef7+/Vz+qOv3/89ciWjeVn2H4y70cSv1qxkuTjuauJXS1WyUBxPZvHWIoms8oJ0xzJ2/9uGtUQcPWa5Qh/FHysHjLDwI6byznHMzV14Cykbx5Ezq9pHzTiOn1bJPmrGwS4KxnHWTVxv86gWx7kTKtZHqThGmM0Ia9hLqTjYV504xrllx1nJk5zn+N9PH3SWGfAziuwco81ytPU8pkgc9FAhjjFv0zFXdZcKcdCJOIimj2Pk3XvktW0xfRz0Iw6iueMYf98ef4U3zB0HXYmDSBxE4nhE4V9HeGviOM56rXcpY3sf874mnTiOU7xtovz+IY47rHbmQxxbrVZGE8dGC5bRxLHFmmU0cXxo2TKaOG5buYwmjhsWL6OJI1FGE8cWa5bR1onj4U8zly2jLRLHvd+GXK1cRps6jo3DfvjbkL3KmPcrmInj2OinGW8c1eJ7xkX9ONqjfbBEHE0fD1kljqaP+80dx70DPr6PqROcO44H2D+2Wy6Opo/Npo/jsdEe08fs2U0fx8N8kvGhdeNo+vhIhTie2b379TH7M6XViONJ9o+kSBxP3qa791Fg22hl4qCHOnGMc7OOs5In1YmD3ZWKY4RbdoQ17KVUHO3s2VQqo9WLo503oWJltJJxsJeacRx/E9fbNlrVONqx0ypZRiscRztqZlXLaOX/G6/L5Dp9e1I4i4vKO8dVjymWL6MtEkfbe5YrlNHKP1be2uURs0gWFwvFcXGd7l2VLNXE1XJxXG2pZM0mrl4+vX45ew0MapUXpDxAHETiIBIHkTiIxEEkDiJxEB30Cek/334c84PW8cdff/b+EUfsHMro4YCr2j0OZfTT+9r2jUMZvXW9wh3jUMYx+l1n71aIxEEkDiJxEHWM44BPaWg9r3PfnUMfvXW9wt0fK/rop/e1PeI1hz56OOCqOn1O5N0KkTiIxEEkDiJxEImDSBxE4iBy+nxWTp8TOX3OLU6fc4vT59zi9DknEAeROIjEQeT0+fScPud9Tp/zPqfPeZ/T55zJuxUicRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRD9BxDXBfQK3ysCAAAAAElFTkSuQmCC" alt="">
+      <div><h1>アクア農園</h1><p class="today" id="today"></p></div>
+    </div>
+    <div class="hp-links">
+      <a class="hp" href="https://aquanoen.com/" target="_blank" rel="noopener">アクア農園HP ↗</a>
+      <a class="hp edit" href="https://aquanoen.com/wp-login.php?redirect_to=https%3A%2F%2Faquanoen.com%2Fwp-admin%2F" target="_blank" rel="noopener">HPを編集 ↗</a>
+    </div>
   </header>
 
   <a class="app sales" href="https://yakyuuhatomodachi-droid.github.io/nouka-app/">
